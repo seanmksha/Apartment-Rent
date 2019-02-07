@@ -1,0 +1,24 @@
+
+    
+        <nav id="sidebar" class = "sidebar-container col-md-4" *ngIf="user.fullname">
+            <div class="row">
+                
+                    {{user.fullname}}
+               
+                <div class="col-md-8"></div>
+
+                <ul>
+                    <li *ngFor="let item of items">
+                            <a class="viewButton" [routerLink]="['/',item.link]">{{item.text}}</a>
+                            
+                    </li>
+                </ul>
+               
+                <ul>
+                    <li *ngFor="let item of items2">
+                                <a class="viewButton" [routerLink]="['/',item.link]">{{item.text}}</a>            
+                    </li>
+                </ul>
+                
+            </div>
+        </nav>

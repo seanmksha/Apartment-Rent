@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { Subscription } from 'rxjs/Subscription';
 import { AuthService } from '../auth/auth.service';
 
 @Component({
@@ -11,13 +11,14 @@ import { AuthService } from '../auth/auth.service';
 export class HeaderComponent implements OnInit {
 
   @Input() user: any = {};
-
+  private userSubscription: Subscription;
   constructor(
     private authService: AuthService,
     private router: Router
   ) { }
 
   ngOnInit() {
+    
   }
 
   logout(): void {
