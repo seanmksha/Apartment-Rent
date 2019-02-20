@@ -13,6 +13,9 @@ export class ExpenseService{
 
         }
 
+    getExpenses(){
+        
+    }
     add(expense:Expense){
         this.expenses.push(expense);
     }

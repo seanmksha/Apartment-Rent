@@ -19,6 +19,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ExpensesComponent } from './expenses/expenses.component';
+import { ExpenseComponent } from './expenses/expense/expense.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ExpensesComponent } from './expenses/expenses.component';
     HomeComponent,
     SidebarComponent,
     ExpensesComponent,
+    ExpenseComponent,
     
   ],
   imports: [

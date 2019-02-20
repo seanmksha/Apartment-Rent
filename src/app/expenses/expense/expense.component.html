@@ -1,0 +1,37 @@
+<h3>{{expense.cateogry}}</h3>
+<table mat-table [dataSource]=”myExpenses”>
+    <thead>
+      <tr>
+          <td> Title</td>
+          <td> Description</td>
+          <td> Date </td>
+          <td> Check Number </td>
+          <td> Amount </td>
+          <td> Action </td>
+      </tr>
+    </thead>
+      <tr *ngFor = "let expense of expenses; let i=index;">
+          <td>
+            <input type = "text" [(ngModel)]="expense.title">
+          </td>
+          <td>
+            <input type = "text" [(ngModel)]="expense.description">
+          </td>
+          <td>
+            <input type = "text" [(ngModel)]="expense.date">
+          </td>
+          <td>
+            <input type = "text" [(ngModel)]="expense.checknumber">
+          </td>
+          <td>
+            <input type = "number" [(ngModel)]="expense.amount">
+          </td>
+          <td>
+            <div>
+              <button (click)="editExpense(i)">Edit</button>
+              <button (click)="deleteExpense(i)">Delete</button>
+            </div>
+          </td>
+
+      </tr>
+  </table>
