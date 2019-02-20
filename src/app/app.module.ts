@@ -18,7 +18,7 @@ import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { ExpensesComponent } from './expenses/expenses/expenses.component';
+import { ExpensesComponent } from './expenses/expenses.component';
 
 @NgModule({
   declarations: [

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+const Schema = mongoose.Schema;
 const UserSchema = new mongoose.Schema({
   fullname: {
     type: String,
@@ -16,6 +16,8 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  expenses:[{type:Schema.Types.ObjectId,ref:'Expense'}]
+  ,
   createdAt: {
     type: Date,
     default: Date.now
