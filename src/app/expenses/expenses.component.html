@@ -2,7 +2,7 @@
 <app-sidebar [user]="user"></app-sidebar>
 <div class="body">
    <div *ngFor="let expense of expenseMap | keyvalue">
-      <app-expense [expense]="expense.value"></app-expense>
+      <app-expense-list [category]="expense.key" [expense]="expense.value"></app-expense-list>
    </div>
   
 </div>

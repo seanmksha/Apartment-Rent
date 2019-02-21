@@ -1,16 +1,4 @@
-<h3>{{expense.cateogry}}</h3>
-<table mat-table [dataSource]=”myExpenses”>
-    <thead>
-      <tr>
-          <td> Title</td>
-          <td> Description</td>
-          <td> Date </td>
-          <td> Check Number </td>
-          <td> Amount </td>
-          <td> Action </td>
-      </tr>
-    </thead>
-      <tr *ngFor = "let expense of expenses; let i=index;">
+
           <td>
             <input type = "text" [(ngModel)]="expense.title">
           </td>
@@ -28,10 +16,7 @@
           </td>
           <td>
             <div>
-              <button (click)="editExpense(i)">Edit</button>
-              <button (click)="deleteExpense(i)">Delete</button>
+              <button (click)="addExpense()">Save</button>
+              <button (click)="deleteExpense()">Delete</button>
             </div>
           </td>
-
-      </tr>
-  </table>

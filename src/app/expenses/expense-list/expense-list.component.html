@@ -1,0 +1,16 @@
+<h3>{{category}}</h3>
+<table mat-table>
+    <thead>
+      <tr>
+          <td> Title</td>
+          <td> Description</td>
+          <td> Date </td>
+          <td> Check Number </td>
+          <td> Amount </td>
+          <td> Action </td>
+      </tr>
+    </thead>
+      <tr *ngFor = "let expense of expenses; let i=index;">
+          <app-expense [expense]="expense"></app-expense>
+      </tr>
+  </table>

@@ -7,24 +7,18 @@ import {Expense} from "./../expense.model";
   styleUrls: ['./expense.component.scss']
 })
 export class ExpenseComponent implements OnInit {
-   /**
-   * Returns the average of two numbers.
-   *
-   *
-   * @param x - The first input number
-   * @param y - The second input number
-   * @returns The arithmetic mean of `x` and `y`
-   *
-   * @beta
-   */
-
-
   @Input() expense: Expense;
   constructor(private expenseService: ExpenseService) { 
 
   }
 
   ngOnInit() {
-  }
 
+  }
+  editExpense(){
+    this.expenseService.add(this.expense);
+  }
+  deleteExpense(){
+
+  }
 }

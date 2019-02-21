@@ -10,9 +10,8 @@ import { Subscription } from 'rxjs/Subscription';
 })
 export class ExpensesComponent implements OnInit {
   user: any = {};
-  expenseMap: Map<String,Expense[]>;
   private userSubscription: Subscription;
-  
+  private expenseMap: Map<String,Map<String,Expense>>;
   constructor(private authService: AuthService, private expenseService: ExpenseService) {}
 
   ngOnInit() {
@@ -25,5 +24,9 @@ export class ExpensesComponent implements OnInit {
 }
   ngOnDestroy(){
 
+  }
+
+  exportCSV(){
+    
   }
 }

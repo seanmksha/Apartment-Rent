@@ -1,3 +1,4 @@
+import { ExpenseModule } from './expenses/expense.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -27,9 +28,7 @@ import { ExpenseComponent } from './expenses/expense/expense.component';
     HeaderComponent,
     HomeComponent,
     SidebarComponent,
-    ExpensesComponent,
-    ExpenseComponent,
-    
+    ExpensesComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +40,7 @@ import { ExpenseComponent } from './expenses/expense/expense.component';
     AuthModule,
     AdminModule,
     AppRoutingModule,
+    ExpenseModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
