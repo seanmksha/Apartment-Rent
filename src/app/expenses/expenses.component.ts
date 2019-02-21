@@ -15,12 +15,16 @@ export class ExpensesComponent implements OnInit {
   constructor(private authService: AuthService, private expenseService: ExpenseService) {}
 
   ngOnInit() {
-    this.expenseService.getExpenses();
     this.authService.me().subscribe(data => {
       if(data.user){
         this.user = data.user;
       }
   });
+    //this.expenseService.getExpenses(this.user.email).subscribe(
+     
+
+    //);
+    
 }
   ngOnDestroy(){
 

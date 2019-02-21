@@ -8,15 +8,15 @@ import { ExpenseComponent } from './../expense/expense.component';
   styleUrls: ['./expense-list.component.scss']
 })
 export class ExpenseListComponent implements OnInit {
-  expenses:Expense[];
-  //@Input
-  Category:String;
+  @Input() expenses:Map<String,Expense>;
+  @Input() category;
+
   constructor(private expenseService: ExpenseService) { 
 
   }
 
   ngOnInit() {
-    //this.expenseService.getExpenses().subscribe()
+   
   }
   editExpense(){
 

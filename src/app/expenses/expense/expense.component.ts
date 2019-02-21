@@ -13,7 +13,6 @@ export class ExpenseComponent implements OnInit {
   }
 
   ngOnInit() {
-
   }
   editExpense(){
     this.expenseService.add(this.expense);

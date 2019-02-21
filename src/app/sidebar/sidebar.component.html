@@ -9,14 +9,14 @@
 
                 <ul>
                     <li *ngFor="let item of items">
-                            <a class="viewButton" [routerLink]="['/',item.link]">{{item.text}}</a>
+                            <a [routerLink]="['/',item.link]">{{item.text}}</a>
                             
                     </li>
                 </ul>
                
                 <ul>
                     <li *ngFor="let item of items2">
-                                <a class="viewButton" [routerLink]="['/',item.link]">{{item.text}}</a>            
+                                <a [routerLink]="['/',item.link]">{{item.text}}</a>            
                     </li>
                 </ul>
                 
